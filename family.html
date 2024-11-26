@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <style>
+        /* Navigation bar styles */
+        nav {
+            background-color: #3d251e;
+            padding: 15px;
+            text-align: center;
+	    font-family: 'times new roman', sans-serif;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Page container */
+        body {
+            font-family: 'times new roman', sans-serif;
+            background-color: #4e3829;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Family section styles */
+        #family {
+            background-color: #fafafa;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            background-image: url('https://i.pinimg.com/736x/e1/94/55/e194552f3cd20f02f4f5df63b6872ae2.jpg');
+            background-size: fit;
+            background-position: center;
+            min-height: calc(100vh - 100px);
+            padding: 20px;
+        }
+
+        #family h2 {
+            color: #4e3829;
+            animation: slideDown 1.5s ease-in-out;
+        }
+
+        /* Grid layout for columns */
+        .family-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 30px;
+        }
+
+        .family-member {
+            display: flex;
+	    font-family: 'algerian', sans-serif;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .family-member:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background-color: #e1daca;
+        }
+
+        .family-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .family-member:hover img {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .family-member-info {
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation buttons */
+        .navigation-buttons {
+            position: fixed;
+            bottom: 2.5cm;
+            width: 99%;
+        }
+
+        .navigation-buttons a {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: #3d251e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: #555;
+        }
+
+        .navigation-buttons .previous {
+            left: 10px;
+        }
+
+        .navigation-buttons .next {
+            right: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3d251e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <!-- Family Section -->
+    <section id="family">
+        <h2>MY FAMILY</h2>
+
+        <!-- Family Member Grid -->
+        <div class="family-container">
+            <div class="family-member">
+                <img src="image/gallery 4.jpeg" alt="Farihah Aiman">
+                <div>
+                    <div class="family-member-info">Name: Farihah Aiman Binti Abdul Rahim</div>
+                    <div class="family-member-info">Age: 23</div>
+                    <div class="family-member-info">Hobby: Reading</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 1.jpg" alt="Siti Aisyah">
+                <div>
+                    <div class="family-member-info">Name: Siti Aisyah Binti Abdul Rahim</div>
+                    <div class="family-member-info">Age: 20</div>
+                    <div class="family-member-info">Hobby: Cooking</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 9.jpeg"" alt="Siti Mariam">
+                <div>
+                    <div class="family-member-info">Name: Siti Mariam Binti Abdul Rahim</div>
+                    <div class="family-member-info">Age: 20</div>
+                    <div class="family-member-info">Hobby: Painting</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 7.jpeg"" alt="Abdul Hadi">
+                <div>
+                    <div class="family-member-info">Name: Abdul Hadi bin Abdul Rahim</div>
+                    <div class="family-member-info">Age: 19</div>
+                    <div class="family-member-info">Hobby: Playing Video Games</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 8.jpeg"" alt="Hazim Wafiy">
+                <div>
+                    <div class="family-member-info">Name: Muhammad Hazim Wafiy Bin Abdul Rahim</div>
+                    <div class="family-member-info">Age: 14</div>
+                    <div class="family-member-info">Hobby: Play Football</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 6.jpeg" alt="Izzuddin">
+                <div>
+                    <div class="family-member-info">Name: Ahmad Izzuddin Bin Abdul Rahim</div>
+                    <div class="family-member-info">Age: 13</div>
+                    <div class="family-member-info">Hobby: Video Games</div>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="image/gallery 5.jpeg" alt="Nurul Huda">
+                <div>
+                    <div class="family-member-info">Name: Nurul Huda Binti Abdul Rahim</div>
+                    <div class="family-member-info">Age: 10</div>
+                    <div class="family-member-info">Hobby: Drawing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="navigation-buttons">
+        <a href="education.html" class="previous">Previous</a>
+        <a href="experience.html" class="next">Next</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 My Family
+    </footer>
+</body>
+</html>

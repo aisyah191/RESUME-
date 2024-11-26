@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        /* Navigation bar styles */
+        nav {
+            background-color: #3d251e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Biodata section styles */
+        #biodata {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('https://i.pinimg.com/474x/18/85/00/1885003aa6ddc0d58fe0d2a571240f0f.jpg');
+            background-size: fit;
+            background-position: vertically;
+            padding: 10px;
+            min-height: calc(100vh - 100px);
+        }
+
+        /* Header animation */
+        #biodata h2 {
+            text-align: center;
+            color: brown;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Roboto', Aharoni;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Section styles */
+        #biodata .section {
+            background: #efe7da;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            text-align: center;
+            width: 60%;
+            max-width: 100%;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Start with offset */
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        /* Delay animations for sections */
+        #biodata .section:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        #biodata .section:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        #biodata .section:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        #biodata .section:nth-child(5) {
+            animation-delay: 2s;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+	
+	/* Map styles */
+        .map iframe {
+            width: 100%;
+            height: 200px;
+            border: 0;
+            border-radius: 8px;
+        }
+        /* Video iframe styles */
+        .videos iframe {
+            width: 70%;
+            height: 250px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+	/* Previous and Next buttons */
+        .navigation-buttons {
+            position: fixed;
+            bottom: 2.5cm;
+            width: 99%;
+        }
+
+        .navigation-buttons a {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: #3d251e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: #555;
+        }
+
+        .navigation-buttons .previous {
+            left: 10px;
+        }
+
+        .navigation-buttons .next {
+            right: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3d251e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <!-- Biodata Section -->
+    <section id="biodata">
+        <h2>BIODATA</h2>
+        
+        <!-- Personal Information -->
+        <div class="section">
+            <h3>PERSONAL INFORMATION</h3>
+            <p><strong>NAME:</strong> SITI AISYAH BINTI ABDUL RAHIM</p>
+            <p><strong>AGE:</strong> 20</p>
+            <p><strong>DATE OF BIRTH:</strong> 12 MAY 2004</p>
+        </div>
+
+        <!-- Second Section: Address with Map -->
+        <div class="section">
+            <h3>ADDRESS</h3>
+            <p>• ALOR SETAR, KEDAH</p>
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15945.446249407424!2d100.360083!3d6.1212049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cb07683f7ed7b3%3A0x844b7d90c4ee6e15!2sAlor%20Setar%2C%20Kedah!5e0!3m2!1sen!2smy!4v1690100000000!5m2!1sen!2smy" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="section">
+            <h3>SOCIAL MEDIA</h3>
+            <p>• <a href="https://www.facebook.com/" target="_blank">FACEBOOK</a></p>
+            <p>• <a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></p>
+            <p>• <a href="https://www.tiktok.com/" target="_blank">TIKTOK</a></p>
+        </div>
+
+        <!-- Favourite Music -->
+        <div class="section">
+            <h3>FAVOURITE MUSIC</h3>
+            <p>1. Taylor Swift - Love Story</p>
+            <audio controls>
+                <source src="audio/taylor-swift-love-story-128-ytshorts.savetube.me.mp3" type="audio/mpeg">
+            </audio>
+            <p>2. Billie Eilish - Ocean Eyes</p>
+            <audio controls>
+                <source src="audio/billie-eilish-ocean-eyes-official-music-video-128-ytshorts.savetube.me.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Favourite Video -->
+        <div class="section">
+            <h3>MY FAVOURITE MUSIC VIDEO</h3>
+            <div class="videos">
+                <p>1. Nidji - Sumpah Cinta dan Matiku (Cover by Esga De Latoya</p>
+                <iframe src="video/SUMPAH & CINTA MATIKU - NIDJI  COVER BY EGHA DE LATOYA.mp4" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+ <!-- Previous and Next Navigation -->
+    <div class="navigation-buttons">
+        <a href="index.html" class="previous">Previous</a>
+        <a href="education.html" class="next">Next</a>
+    </div>
+
+    <footer>
+        © 2024 My Resume
+    </footer>
+</body>
+</html>

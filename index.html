@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Navigation bar styles */
+        nav {
+            background-color: #3d251e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Home section styles */
+        #home {
+            height: calc(100vh - 100px); /* Full height minus navbar and footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('https://i.pinimg.com/474x/f8/8b/d0/f88bd0b697d6727b4193835969bd1973.jpg'); /* Replace with the Pinterest image URL */
+            background-size: full cover;
+            background-position: center;
+        }
+
+        #home .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+           #home .content img { 
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 3px solid #white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+	}
+
+       #home .content img:hover {
+            transform: scale(1.1) rotate(5deg); /* Slightly enlarge and rotate the image */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow for a floating effect */
+
+	}
+
+   	#home h1 {  
+   	    color: #771011;
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: 'Roboto', ink free; /* Default font */
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effect */
+	}
+
+	#home h1:hover {
+            color: #595240; /* Change to a vibrant color on hover */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+            transform: scale(1.05); /* Slightly enlarge the text */
+	}
+
+        #home p {
+            color: #592e36;
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: bold;
+            font-family: 'Open Sans', Algerian; /* Default font */
+            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+	}
+
+        #home p:hover {
+            color: #aebfbc; /* Change to a golden color on hover */
+            transform: translateY(-5px); /* Move text slightly upward */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
+
+	}
+
+        /* Previous and Next buttons */
+        .navigation-buttons {
+            position: fixed;
+            bottom: 2.5cm;
+            width: 99%;
+        }
+
+        .navigation-buttons a {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: #3d251e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: #555;
+        }
+
+        .navigation-buttons .previous {
+            left: 10px;
+        }
+
+        .navigation-buttons .next {
+            right: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3d251e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="content">
+            <img src="image/gallery 1.jpg" alt="Your Picture">
+            <div>
+                <h1>Welcome to My Resume</h1>
+                <p>SITI AISYAH BINTI ABDUL RAHIM.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous and Next Navigation -->
+    <div class="navigation-buttons">
+        <a href="gallery.html" class="previous">Previous</a>
+        <a href="biodata.html" class="next">Next</a>
+    </div>
+
+    <footer>
+        © 2024 My Resume
+    </footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: times new roman, sans-serif;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #3d251e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Education section styles */
+        #education-section {
+            background-color: #fafafa;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+	    background-image: url('https://i.pinimg.com/474x/5f/3b/bd/5f3bbdf77970a7539f132683a345c585.jpg');
+            background-size: fit;
+            background-position: center;
+            padding: 10px;
+            min-height: calc(100vh - 100px);
+	}
+	
+        #education-section h2 {
+            font-size: 2em;
+            color: #3d251e;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 1s forwards;
+        }
+
+        #education {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .column:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .column:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .column:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .column:nth-child(4) {
+            animation-delay: 1.1s;
+        }
+
+        .column:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .column:hover h3 {
+            animation: bounce 0.5s;
+        }
+
+        .column h3 {
+            margin-bottom: 10px;
+            color: #3d251e;
+        }
+
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .column li {
+            margin: 8px 0;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Previous and Next buttons */
+        .navigation-buttons {
+            position: fixed;
+            bottom: 2.5cm;
+            width: 99%;
+        }
+
+        .navigation-buttons a {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: #3d251e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: #555;
+        }
+
+        .navigation-buttons .previous {
+            left: 10px;
+        }
+
+        .navigation-buttons .next {
+            right: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3d251e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <!-- Education Section -->
+    <section id="education-section">
+        <h2>EDUCATION</h2>
+        <div id="education">
+            <div class="column">
+                <h3>1. KINDERGARTEN</h3>
+                <ul>
+                    <li><strong>Name:</strong> Pasti Nurul Iman</li>
+                    <li><strong>Year:</strong> 2009-2010</li>
+                    <li><strong>Location:</strong> Alor Setar, Kedah</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>2. PRIMARY SCHOOL</h3>
+                <ul>
+                    <li><strong>Name:</strong> Sekolah Kebangsaan Dato' Shaari</li>
+                    <li><strong>Year:</strong> 2011-2016</li>
+                    <li><strong>Location:</strong> Alor Setar, Kedah</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>3. SECONDARY SCHOOL</h3>
+                <ul>
+                    <li><strong>Name:</strong> Maktab Mahmud Pokok Sena</li>
+                    <li><strong>Year:</strong> 2017-2022</li>
+                    <li><strong>Location:</strong> Langgar, Pokok Sena</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>4. UNIVERSITY</h3>
+                <ul>
+                    <li><strong>Name:</strong> Universiti Teknologi Mara (UiTM), Merbok</li>
+                    <li><strong>Year:</strong> 2022-2025</li>
+                    <li><strong>Location:</strong> Merbok, Kedah</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous and Next Navigation -->
+    <div class="navigation-buttons">
+        <a href="biodata.html" class="previous">Previous</a>
+        <a href="family.html" class="next">Next</a>
+    </div>
+
+    <footer>
+        © 2024 My Resume
+    </footer>
+</body>
+</html>

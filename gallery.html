@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* Navigation bar styles */
+        nav {
+            background-color:#3d251e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Gallery section styles */
+        #gallery {
+            background-color: #fafafa;
+            padding: 20px;
+            text-align: center;
+	    background-image: url('https://i.pinimg.com/474x/48/02/19/480219046757dd01bbe21d9f8bb4d166.jpg');
+            background-size: fit;
+            background-position: vertically;
+            padding: 10px;
+            min-height: calc(100vh - 100px);
+        }
+
+        #gallery h2 {
+            color: #444;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 180px;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease forwards;
+            opacity: 0; /* Initially hidden */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-in animation for images */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation delay for staggered effect */
+        .gallery img:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .gallery img:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .gallery img:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Previous and Next buttons */
+        .navigation-buttons {
+            position: fixed;
+            bottom: 2.5cm;
+            width:  99%;
+        }
+
+        .navigation-buttons a {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: #3d251e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: #555;
+        }
+
+        .navigation-buttons .previous {
+            left: 10px;
+        }
+
+        .navigation-buttons .next {
+            right: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3d251e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>GALLERY</h2>
+        <div class="gallery">
+            <img src="image/gallery 1.jpg" alt="Project 1">
+            <img src="image/gallery 2.jpg" alt="Project 2">
+            <img src="image/gallery 3.jpg" alt="Project 3">
+        </div>
+    </section>
+
+    <!-- Previous and Next Navigation -->
+    <div class="navigation-buttons">
+        <a href="experience.html" class="previous">Previous</a>
+        <a href="index.html" class="next">Next</a>
+    </div>
+
+    <footer>
+        © 2024 My Resume
+    </footer>
+</body>
+</html>
